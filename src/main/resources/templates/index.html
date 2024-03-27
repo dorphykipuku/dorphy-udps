@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client List</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.1.3/css/bootstrap.min.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Chez PAUL</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" th:href="@{/client}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/reservation}">Reservation</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<section class="hero bg-primary text-white text-center">
+    <div class="container">
+
+        <h2 class="display-4">Réservez votre place dès maintenant!</h2>
+        <a th:href="@{/form}" class="btn btn-light btn-lg">Réserver maintenant</a>
+        <br>
+        <p class="lead">Découvrez notre délicieux menu et réservez une table pour une expérience gastronomique exceptionnelle.</p>
+
+    </div>
+</section>
+
+<!-- Featured Dishes Section -->
+<section class="featured-dishes">
+    <div class="container">
+        <h2 class="text-center mb-4">Menu en vedette</h2>
+        <div class="row">
+            <!-- Affichez ici quelques plats en vedette avec Thymeleaf -->
+            <!-- Exemple : -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="j.jpg" class="card-img-top img-fluid" alt="Featured Dish">
+                    <div class="card-body">
+                        <h5 class="card-title">Nos plats</h5>
+                        <p class="card-text">les meilleurs salades</p>
+                        <p class="card-text">poulet </p>
+                        <p class="card-text">crevettes</p>
+                        <p class="card-text">pizza peperonni</p>
+                        <a href="#" class="btn btn-primary">voir tarif </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="1.jpg" class="card-img-top img-fluid" width="300" height="300" alt="Featured Dish">
+                    <div class="card-body">
+                        <h5 class="card-title">Nos boissons</h5>
+                        <p class="card-text">Vins</p>
+                        <p class="card-text">Champagnes</p>
+                        <p class="card-text">Whisky</p>
+                        <p class="card-text">Jus de fruit</p>
+                        <a href="#" class="btn btn-primary">voir tarif </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img th:src="@{15.jpg}" class="card-img-top img-fluid" alt="Featured Dish">
+                    <div class="card-body">
+                        <h5 class="card-title">Disposition de Nos tables</h5>
+                        <p class="card-text">Table pour famille</p>
+                        <p class="card-text">Couple </p>
+                        <p class="card-text">Reunion et anniversaire</p>
+                        <a th:href="@{/tables}" class="btn btn-primary">voir tarif </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Ajoutez d'autres plats en vedette au besoin -->
+        </div>
+    </div>
+</section>
+<footer class="bg-light text-center py-3">
+    <p>&copy; 2024 Restaurant Reservations</p>
+</footer>
+
+</body>
+</html>
